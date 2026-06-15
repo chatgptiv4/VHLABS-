@@ -15,7 +15,7 @@ import { SITE } from "@/lib/site";
 export default function HomePage() {
   return (
     <>
-            <PageMeta title="{`${SITE.name} \u2014 ${SITE.tagline}`}" url="/" canonical="/" />
+      <PageMeta title={`${SITE.name} — ${SITE.tagline}`} url="/" canonical="/" />
       <Hero />
       <TrustStrip />
       <Services />
@@ -74,22 +74,8 @@ function ContactBlock() {
             directly.
           </SectionLead>
           <ul className="mt-8 space-y-2 text-sm">
-            <li>
-              <a
-                className="text-foreground hover:text-primary transition-colors"
-                href={`mailto:${SITE.email}`}
-              >
-                {SITE.email}
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                href={SITE.phoneHref}
-              >
-                {SITE.phone}
-              </a>
-            </li>
+            <li><a className="text-foreground hover:text-primary transition-colors" href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+            <li><a className="text-muted-foreground hover:text-foreground transition-colors" href={SITE.phoneHref}>{SITE.phone}</a></li>
           </ul>
         </div>
         <ContactForm />
